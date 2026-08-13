@@ -275,22 +275,34 @@ button { font-family: inherit; cursor: pointer; }
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    padding: 6px;
-    z-index: 110;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 130;
+    transition: border-color 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s var(--ease);
 }
+.hamburger:hover { border-color: var(--border); box-shadow: 0 8px 26px rgba(202, 138, 4, 0.18); }
+.hamburger:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .hamburger span {
-    width: 26px;
+    width: 20px;
     height: 2px;
-    background: var(--text);
+    background: var(--gold-grad);
     border-radius: 2px;
-    transition: transform 0.35s var(--ease), opacity 0.3s;
+    transition: transform 0.35s var(--ease), opacity 0.3s, width 0.35s var(--ease);
 }
-.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.hamburger.active { background: rgba(202, 138, 4, 0.1); border-color: var(--border); }
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; width: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================================
    HERO
@@ -1723,8 +1735,8 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
    ============================================================ */
 .whatsapp-float {
     position: fixed;
-    right: 1.4rem;
-    bottom: 1.4rem;
+    right: calc(1.4rem + env(safe-area-inset-right));
+    bottom: calc(1.4rem + env(safe-area-inset-bottom));
     z-index: 150;
     width: 60px;
     height: 60px;
@@ -1734,7 +1746,8 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
     background: linear-gradient(145deg, #3DDC84, #128C7E);
     color: #fff;
     box-shadow: 0 14px 34px rgba(18, 140, 126, 0.45);
-    transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s, width 0.4s var(--ease);
+    overflow: visible;
 }
 .whatsapp-float::before {
     content: "";
@@ -1745,7 +1758,31 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
     animation: waPulse 2.2s ease-out infinite;
 }
 .whatsapp-float svg { width: 30px; height: 30px; position: relative; z-index: 1; }
-.whatsapp-float:hover { transform: translateY(-5px) scale(1.07); box-shadow: 0 20px 44px rgba(18, 140, 126, 0.6); }
+.whatsapp-float::after {
+    content: "Chat with us";
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    padding: 0.55rem 1rem;
+    white-space: nowrap;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    background: rgba(20, 17, 16, 0.92);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.07);
+    box-shadow: 0 20px 44px rgba(18, 140, 126, 0.6);
+}
+.whatsapp-float:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+.menu-open .whatsapp-float { opacity: 0; pointer-events: none; transform: scale(0.85); }
 @keyframes waPulse {
     0% { transform: scale(0.75); opacity: 1; }
     100% { transform: scale(1.6); opacity: 0; }
@@ -1970,29 +2007,49 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
     .slide-card { width: 200px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hamburger { display: flex; }
     .nav-book { display: none; }
-    .nav-book-mobile { display: block; }
-    .tour-tag-1 { left: 0; }
-    .tour-tag-2 { right: 0; }
-    .hero-floatcard-1 { width: 110px; top: 13%; left: 5%; }
-    .hero-floatcard-3 { width: 100px; top: 15%; right: 5%; }
-    .hero-floatcard-1, .hero-floatcard-3 { opacity: 0.9; }
+    .nav-book-mobile { display: flex; justify-content: center; }
     .nav-links {
         position: fixed;
         inset: 0;
         flex-direction: column;
         justify-content: center;
-        gap: 2rem;
-        background: rgba(12, 10, 9, 0.97);
+        gap: 1.6rem;
+        padding: 5.5rem 1.5rem 2rem;
+        background:
+            radial-gradient(ellipse at 50% 0%, rgba(202, 138, 4, 0.14), transparent 55%),
+            rgba(12, 10, 9, 0.97);
         backdrop-filter: blur(18px);
-        transform: translateY(-100%);
-        transition: transform 0.5s var(--ease);
-        z-index: 105;
+        -webkit-backdrop-filter: blur(18px);
+        transform: translateY(-101%);
+        transition: transform 0.55s var(--ease);
+        z-index: 120;
+        overflow-y: auto;
     }
     .nav-links.open { transform: translateY(0); }
-    .nav-links a:not(.primary-btn) { font-size: 1.5rem; font-family: var(--serif); }
+    .nav-links li { opacity: 0; transform: translateY(26px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+    .nav-links.open li { opacity: 1; transform: none; }
+    .nav-links.open li:nth-child(1) { transition-delay: 0.06s; }
+    .nav-links.open li:nth-child(2) { transition-delay: 0.12s; }
+    .nav-links.open li:nth-child(3) { transition-delay: 0.18s; }
+    .nav-links.open li:nth-child(4) { transition-delay: 0.24s; }
+    .nav-links.open li:nth-child(5) { transition-delay: 0.3s; }
+    .nav-links.open li:nth-child(6) { transition-delay: 0.36s; }
+    .nav-links a:not(.primary-btn) { font-size: 1.55rem; font-family: var(--serif); font-weight: 600; }
+    .nav-links a:not(.primary-btn)::after { bottom: -4px; }
+    .nav-book-mobile { margin-top: 1.4rem; }
+    .nav-book-mobile a { font-size: 1.05rem; padding: 1rem 2.6rem; }
+    .whatsapp-float::after { display: none; }
+}
+
+@media (max-width: 768px) {
+    .tour-tag-1 { left: 0; }
+    .tour-tag-2 { right: 0; }
+    .hero-floatcard-1 { width: 110px; top: 13%; left: 5%; }
+    .hero-floatcard-3 { width: 100px; top: 15%; right: 5%; }
+    .hero-floatcard-1, .hero-floatcard-3 { opacity: 0.9; }
     .form-row { grid-template-columns: 1fr; }
     .gallery-item { width: 62vw; }
     .gg-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
@@ -2009,7 +2066,13 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
     .steps-grid { grid-template-columns: 1fr; }
     .gg-grid { grid-template-columns: repeat(auto-fill, minmax(44vw, 1fr)); }
     .slide-card { width: 42vw; }
-    .whatsapp-float { width: 54px; height: 54px; right: 1rem; bottom: 1rem; }
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        right: calc(1rem + env(safe-area-inset-right));
+        bottom: calc(1rem + env(safe-area-inset-bottom));
+    }
+    .whatsapp-float svg { width: 27px; height: 27px; }
     .video-banner { min-height: 52vh; }
 }
 

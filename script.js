@@ -57,14 +57,21 @@
         const closeMenu = () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            document.documentElement.style.overflow = '';
             hamburger.setAttribute('aria-expanded', 'false');
         };
         hamburger.addEventListener('click', () => {
             const open = navLinks.classList.toggle('open');
             hamburger.classList.toggle('active', open);
+            document.body.classList.toggle('menu-open', open);
+            document.documentElement.style.overflow = open ? 'hidden' : '';
             hamburger.setAttribute('aria-expanded', String(open));
         });
         navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900 && navLinks.classList.contains('open')) closeMenu();
+        });
     }
 
     /* ============================================================
