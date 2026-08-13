@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Mimies Hair — Tembisa</title>
+
+    <meta name="description"
+          content="Browse the Mimies Hair gallery: braids, nails, makeup and hair styles created in Tembisa, Johannesburg.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0C0A09">
+
+    <link rel="icon"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%87%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-gallery">
+
+    <video class="page-video-bg" autoplay muted loop playsinline aria-hidden="true">
+        <source src="hero/hero.mp4" type="video/mp4">
+    </video>
+    <div class="page-video-shade" aria-hidden="true"></div>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-logo">Mimies<span>Hair</span></span>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <a class="whatsapp-float" href="https://wa.me/27753032625" target="_blank" rel="noopener" aria-label="Chat with Mimies Hair on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.8.9 3.8 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9.9.9-4.8-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5 .9 6.9 2.7 1.9 1.9 2.9 4.3 2.9 6.9-.1 5.4-4.5 9.2-9.5 9.2zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+        </svg>
+    </a>
+
+    <!-- NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="Mimies Hair home">
+                Mimies<span>Hair</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="pricing.html">Prices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-book-mobile"><a href="contact.html" class="primary-btn">Book Now</a></li>
+            </ul>
+
+            <a href="contact.html" class="primary-btn nav-book">Book Now</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-hero gal-header">
+        <div class="page-hero-inner">
+            <p class="page-index" aria-hidden="true">02</p>
+            <p class="section-label reveal-up">The Archive</p>
+            <h1 class="reveal-up" data-delay="1">90 Looks.<br><span class="gold-text">One Studio.</span></h1>
+            <p class="page-hero-text reveal-up" data-delay="2">
+                Braids, nails, makeup and hair — every look a signature.
+            </p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-page section">
+        <div class="gallery-filters reveal-up" id="galleryFilters">
+            <button class="gallery-filter active" data-filter="all">All</button>
+            <button class="gallery-filter" data-filter="braids">Braids</button>
+            <button class="gallery-filter" data-filter="nails">Nails</button>
+            <button class="gallery-filter" data-filter="makeup">Makeup</button>
+            <button class="gallery-filter" data-filter="styles">Styles</button>
+        </div>
+
+        <div class="gg-group" data-group="braids">
+            <div class="gg-heading reveal-up">
+                <span class="gg-num">01</span>
+                <h3>Braids &amp; Knots</h3>
+                <p>Box braids, knotless, cornrows and twists.</p>
+            </div>
+            <div class="gg-grid">
+                <figure class="gg-item" data-cat="braids" data-index="0">
+                    <img src="gallery/braids/braids-3.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="1">
+                    <img src="gallery/braids/braids-4.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="2">
+                    <img src="gallery/braids/braids-5.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="3">
+                    <img src="gallery/braids/braids-6.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="4">
+                    <img src="gallery/braids/braids-7.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="5">
+                    <img src="gallery/braids/braids-8.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="6">
+                    <img src="gallery/braids/braids-9.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="7">
+                    <img src="gallery/braids/braids-10.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="8">
+                    <img src="gallery/braids/braids-11.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="9">
+                    <img src="gallery/braids/braids-13.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="braids" data-index="10">
+                    <img src="gallery/braids/braids-14.jfif" alt="Braids by Mimies Hair" loading="lazy">
+                </figure>
+            </div>
+        </div>
+
+        <div class="gg-group" data-group="nails">
+            <div class="gg-heading reveal-up">
+                <span class="gg-num">02</span>
+                <h3>Nail Studio</h3>
+                <p>Gel, acrylic, press-ons and nail art.</p>
+            </div>
+            <div class="gg-grid">
+                <figure class="gg-item" data-cat="nails" data-index="0">
+                    <img src="gallery/nails/nails-1.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="1">
+                    <img src="gallery/nails/nails-2.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="2">
+                    <img src="gallery/nails/nails-3.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="3">
+                    <img src="gallery/nails/nails-4.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="4">
+                    <img src="gallery/nails/nails-5.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="5">
+                    <img src="gallery/nails/nails-6.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="6">
+                    <img src="gallery/nails/nails-7.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="7">
+                    <img src="gallery/nails/nails-8.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="8">
+                    <img src="gallery/nails/nails-9.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="9">
+                    <img src="gallery/nails/nails-10.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="10">
+                    <img src="gallery/nails/nails-11.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="11">
+                    <img src="gallery/nails/nails-12.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="12">
+                    <img src="gallery/nails/nails-13.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="13">
+                    <img src="gallery/nails/nails-14.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="14">
+                    <img src="gallery/braids/braids-1.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="15">
+                    <img src="gallery/braids/braids-2.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="nails" data-index="16">
+                    <img src="gallery/braids/braids-12.jfif" alt="Nails by Mimies Hair" loading="lazy">
+                </figure>
+            </div>
+        </div>
+
+        <div class="gg-group" data-group="makeup">
+            <div class="gg-heading reveal-up">
+                <span class="gg-num">03</span>
+                <h3>Makeup Bar</h3>
+                <p>Bridal, event and everyday glam.</p>
+            </div>
+            <div class="gg-grid">
+                <figure class="gg-item" data-cat="makeup" data-index="0">
+                    <img src="gallery/makeup/makeup-1.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="1">
+                    <img src="gallery/makeup/makeup-2.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="2">
+                    <img src="gallery/makeup/makeup-3.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="3">
+                    <img src="gallery/makeup/makeup-4.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="4">
+                    <img src="gallery/makeup/makeup-5.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="5">
+                    <img src="gallery/makeup/makeup-6.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="6">
+                    <img src="gallery/makeup/makeup-7.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="7">
+                    <img src="gallery/makeup/makeup-8.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="8">
+                    <img src="gallery/makeup/makeup-9.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="9">
+                    <img src="gallery/makeup/makeup-10.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="10">
+                    <img src="gallery/makeup/makeup-11.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="11">
+                    <img src="gallery/makeup/makeup-12.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="12">
+                    <img src="gallery/makeup/makeup-13.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="13">
+                    <img src="gallery/makeup/makeup-14.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="14">
+                    <img src="gallery/makeup/makeup-15.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="15">
+                    <img src="gallery/makeup/makeup-16.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="16">
+                    <img src="gallery/makeup/makeup-17.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="17">
+                    <img src="gallery/makeup/makeup-18.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="18">
+                    <img src="gallery/makeup/makeup-19.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="makeup" data-index="19">
+                    <img src="gallery/makeup/makeup-20.jfif" alt="Makeup by Mimies Hair" loading="lazy">
+                </figure>
+            </div>
+        </div>
+
+        <div class="gg-group" data-group="styles">
+            <div class="gg-heading reveal-up">
+                <span class="gg-num">04</span>
+                <h3>Hair Styles &amp; Wigs</h3>
+                <p>Styling, extensions, silks and lace fronts.</p>
+            </div>
+            <div class="gg-grid">
+                <figure class="gg-item" data-cat="styles" data-index="0">
+                    <img src="gallery/styles/style-1.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="1">
+                    <img src="gallery/styles/style-2.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="2">
+                    <img src="gallery/styles/style-3.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="3">
+                    <img src="gallery/styles/style-4.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="4">
+                    <img src="gallery/styles/style-5.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="5">
+                    <img src="gallery/styles/style-6.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="6">
+                    <img src="gallery/styles/style-7.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="7">
+                    <img src="gallery/styles/style-8.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="8">
+                    <img src="gallery/styles/style-9.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="9">
+                    <img src="gallery/styles/style-10.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="10">
+                    <img src="gallery/styles/style-11.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="11">
+                    <img src="gallery/styles/style-12.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="12">
+                    <img src="gallery/styles/style-13.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="13">
+                    <img src="gallery/styles/style-14.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="14">
+                    <img src="gallery/styles/style-15.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="15">
+                    <img src="gallery/styles/style-16.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="16">
+                    <img src="gallery/styles/style-17.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="17">
+                    <img src="gallery/styles/style-18.jfif" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="18">
+                    <img src="gallery/styles/style-19.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="19">
+                    <img src="gallery/styles/style-20.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="20">
+                    <img src="gallery/styles/style-21.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="21">
+                    <img src="gallery/styles/style-22.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="22">
+                    <img src="gallery/styles/style-23.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="23">
+                    <img src="gallery/styles/style-24.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="24">
+                    <img src="gallery/styles/style-25.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="25">
+                    <img src="gallery/styles/style-26.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="26">
+                    <img src="gallery/styles/style-27.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="27">
+                    <img src="gallery/styles/style-28.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="28">
+                    <img src="gallery/styles/style-29.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="29">
+                    <img src="gallery/styles/style-30.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="30">
+                    <img src="gallery/styles/style-31.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="31">
+                    <img src="gallery/styles/style-32.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="32">
+                    <img src="gallery/styles/style-33.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="33">
+                    <img src="gallery/styles/style-34.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="34">
+                    <img src="gallery/styles/style-35.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="35">
+                    <img src="gallery/styles/style-36.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="36">
+                    <img src="gallery/styles/style-37.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="37">
+                    <img src="gallery/styles/style-38.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="38">
+                    <img src="gallery/styles/style-39.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="39">
+                    <img src="gallery/styles/style-40.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="40">
+                    <img src="gallery/styles/style-41.jpg" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+                <figure class="gg-item" data-cat="styles" data-index="41">
+                    <img src="gallery/styles/style-42.webp" alt="Hair style by Mimies Hair" loading="lazy">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="Hair style enlarged">
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="index.html" class="logo">Mimies<span>Hair</span></a>
+            <p>Premium hair, nails and beauty in the heart of Tembisa, Johannesburg.</p>
+            <div class="socials">
+                <a href="https://wa.me/27753032625" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+                </a>
+                <a href="mailto:mitcheloften@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Mimies Hair. All Rights Reserved.</p>
+        <p class="credit">Website crafted by <a href="#" target="_blank" rel="noopener">Noel Digital Agency</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

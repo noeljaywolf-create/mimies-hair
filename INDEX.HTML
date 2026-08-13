@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mimies Hair | Hair Salon in Tembisa, Johannesburg</title>
+
+    <meta name="description"
+          content="Mimies Hair is a professional hair salon in Tembisa, Johannesburg, offering hair styling, braiding, nails, makeup, extensions and beauty services. Book your appointment today.">
+
+    <meta name="keywords"
+          content="Mimies Hair, hair salon Tembisa, nails Tembisa, makeup artist Tembisa, hair braiding Tembisa, hair extensions Tembisa, beauty salon Tembisa, hairdresser Tembisa">
+
+    <meta name="author" content="Mimies Hair">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0C0A09">
+
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Tembisa, Johannesburg, South Africa">
+
+    <meta property="og:title" content="Mimies Hair | Hair Salon in Tembisa">
+    <meta property="og:description"
+          content="Professional hair styling, braiding, nails, makeup and beauty services in Tembisa, Johannesburg.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+
+    <link rel="icon"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%87%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+
+    <video class="page-video-bg" autoplay muted loop playsinline aria-hidden="true">
+        <source src="hero/hero.mp4" type="video/mp4">
+    </video>
+    <div class="page-video-shade" aria-hidden="true"></div>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-logo">Mimies<span>Hair</span></span>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <a class="whatsapp-float" href="https://wa.me/27753032625" target="_blank" rel="noopener" aria-label="Chat with Mimies Hair on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.8.9 3.8 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9.9.9-4.8-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5 .9 6.9 2.7 1.9 1.9 2.9 4.3 2.9 6.9-.1 5.4-4.5 9.2-9.5 9.2zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+        </svg>
+    </a>
+
+    <!-- NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="Mimies Hair home">
+                Mimies<span>Hair</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pricing.html">Prices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-book-mobile"><a href="contact.html" class="primary-btn">Book Now</a></li>
+            </ul>
+
+            <a href="contact.html" class="primary-btn nav-book">Book Now</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO — 3D SCENE -->
+    <section class="hero" id="home" data-scene>
+        <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+            <source src="hero/salon-tour.mp4" type="video/mp4">
+            <source src="hero/hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+
+        <div class="hero-overlay"></div>
+        <div class="hero-glow hero-glow-a" data-parallax="0.35" data-depth="0.5"></div>
+        <div class="hero-glow hero-glow-b" data-parallax="0.25" data-depth="0.3"></div>
+
+        <div class="hero-content" data-depth="0.15">
+            <p class="hero-eyebrow reveal-up" data-delay="1">Mimies Hair · Tembisa, Johannesburg</p>
+            <h1 class="reveal-up" data-delay="2">
+                Crafted Beauty,
+                <span class="gold-text">Worn With Confidence.</span>
+            </h1>
+            <p class="hero-text reveal-up" data-delay="3">
+                Premium hair styling, braiding, nails and makeup — delivered by artists who
+                treat every appointment like a red-carpet moment.
+            </p>
+            <div class="hero-buttons reveal-up" data-delay="4">
+                <a href="services.html" class="primary-btn">Explore Services</a>
+                <a href="contact.html" class="secondary-btn">Book Appointment</a>
+            </div>
+        </div>
+
+        <div class="hero-orb hero-orb-1" data-parallax="0.5" data-depth="0.65"></div>
+        <div class="hero-orb hero-orb-2" data-parallax="0.4" data-depth="0.45"></div>
+        <div class="hero-orb hero-orb-3" data-parallax="0.3" data-depth="0.8"></div>
+        <div class="hero-orb hero-orb-4" data-parallax="0.6" data-depth="0.7"></div>
+
+        <div class="hero-floatcard hero-floatcard-1" data-parallax="0.5" data-depth="0.85">
+            <div class="hero-floatcard-inner">
+                <img src="gallery/styles/style-1.jpg" alt="Signature hair style" loading="lazy">
+                <span class="floatcard-tag">Signature Styles</span>
+            </div>
+        </div>
+        <div class="hero-floatcard hero-floatcard-2" data-parallax="0.65" data-depth="0.6">
+            <div class="hero-floatcard-inner">
+                <img src="gallery/braids/braids-1.jfif" alt="Eyelash extensions" loading="lazy">
+                <span class="floatcard-tag">Lashes</span>
+            </div>
+        </div>
+        <div class="hero-floatcard hero-floatcard-3" data-parallax="0.75" data-depth="0.7">
+            <div class="hero-floatcard-inner">
+                <img src="gallery/nails/nails-1.jfif" alt="Nail art" loading="lazy">
+                <span class="floatcard-tag">Nails</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D SLIDING CARDS — THE SIGNATURE REEL -->
+    <section class="gallery section" id="gallery">
+        <video class="reel-video-bg" autoplay muted loop playsinline aria-hidden="true">
+            <source src="hero/hero.mp4" type="video/mp4">
+        </video>
+        <div class="reel-video-shade" aria-hidden="true"></div>
+
+        <div class="section-heading reveal-up">
+            <p class="section-label">The Signature Reel</p>
+            <h2 class="section-title">Hair, Crafted <span class="gold-text">For You.</span></h2>
+            <p>Real looks from real chairs — a glimpse of what your next appointment can become.</p>
+        </div>
+
+        <div class="coverflow" id="coverflow">
+            <div class="coverflow-viewport" id="coverflowViewport">
+                <div class="coverflow-track" id="coverflowTrack">
+                    <figure class="gallery-item" data-index="0">
+                        <img src="gallery/styles/style-1.jpg" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="1">
+                        <img src="gallery/styles/style-2.webp" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="2">
+                        <img src="gallery/styles/style-3.jfif" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="3">
+                        <img src="gallery/styles/style-4.webp" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="4">
+                        <img src="gallery/styles/style-5.jfif" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="5">
+                        <img src="gallery/styles/style-6.jfif" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="6">
+                        <img src="gallery/styles/style-7.jfif" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="7">
+                        <img src="gallery/styles/style-8.jfif" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item" data-index="8">
+                        <img src="gallery/styles/style-9.jfif" alt="Hair style created by Mimies Hair" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-more reveal-up">
+            <a href="gallery.html" class="secondary-btn" data-tilt>Browse The Full Gallery +</a>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Hair Styling</span><i>✦</i>
+            <span>Braids &amp; Knots</span><i>✦</i>
+            <span>Nail Atelier</span><i>✦</i>
+            <span>Makeup Lounge</span><i>✦</i>
+            <span>Extensions</span><i>✦</i>
+            <span>Wig Installation</span><i>✦</i>
+            <span>Treatments</span><i>✦</i>
+            <span>Bookings Open</span><i>✦</i>
+            <span>Premium Products</span><i>✦</i>
+            <span>Hair Styling</span><i>✦</i>
+            <span>Braids &amp; Knots</span><i>✦</i>
+            <span>Nail Atelier</span><i>✦</i>
+            <span>Makeup Lounge</span><i>✦</i>
+            <span>Extensions</span><i>✦</i>
+            <span>Wig Installation</span><i>✦</i>
+            <span>Treatments</span><i>✦</i>
+            <span>Bookings Open</span><i>✦</i>
+            <span>Premium Products</span><i>✦</i>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+        <div class="about-grid">
+            <div class="about-visual reveal-left" data-tilt>
+                <div class="about-frame"></div>
+                <div class="about-badge">
+                    <strong data-count="5" data-suffix="+">0</strong>
+                    <span>Years of<br>Beauty Craft</span>
+                </div>
+                <img src="gallery/styles/style-1.jpg" alt="Hair styling by Mimies Hair" loading="lazy">
+                <div class="about-orb" data-parallax="0.3"></div>
+            </div>
+
+            <div class="about-content reveal-right">
+                <p class="section-label">About Mimies Hair</p>
+                <h2 class="section-title">Beauty, Crafted<br>&amp; Curated, <span class="gold-text">For You.</span></h2>
+                <p class="about-lead">
+                    More than a salon — a destination where your style story begins.
+                </p>
+                <p>
+                    We combine premium products, clean tools and modern technique with the
+                    personal touch of a stylist who listens first. Every visit ends the same way:
+                    you walking out as the best version of yourself.
+                </p>
+                <ul class="about-points">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Premium products &amp; immaculately clean tools</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Trained, experienced stylists you can trust</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A personalised consultation before every chair</li>
+                </ul>
+                <a href="contact.html" class="primary-btn">Book Your Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE EXPERIENCE -->
+    <section class="signature section">
+        <div class="section-heading reveal-up">
+            <p class="section-label">The Signature Experience</p>
+            <h2 class="section-title">One Destination,<br><span class="gold-text">Every World Of Beauty.</span></h2>
+            <p>Three ateliers under one roof — each mastered, each unforgettable.</p>
+        </div>
+
+        <div class="signature-grid">
+            <a href="gallery.html" class="signature-card reveal-up" data-delay="1" data-tilt>
+                <img src="gallery/styles/style-3.jfif" alt="Hair styling" loading="lazy">
+                <div class="signature-shade"></div>
+                <div class="signature-info">
+                    <span>01</span>
+                    <h3>Hair &amp; Braids</h3>
+                    <p>Styling, braids, extensions and flawless wig installations.</p>
+                </div>
+            </a>
+            <a href="gallery.html" class="signature-card reveal-up" data-delay="2" data-tilt>
+                <img src="gallery/nails/nails-2.jfif" alt="Nail art" loading="lazy">
+                <div class="signature-shade"></div>
+                <div class="signature-info">
+                    <span>02</span>
+                    <h3>Nail Atelier</h3>
+                    <p>Gel, acrylic, press-ons and custom art — hands that make statements.</p>
+                </div>
+            </a>
+            <a href="gallery.html" class="signature-card reveal-up" data-delay="3" data-tilt>
+                <img src="gallery/makeup/makeup-2.jfif" alt="Makeup artistry" loading="lazy">
+                <div class="signature-shade"></div>
+                <div class="signature-info">
+                    <span>03</span>
+                    <h3>Makeup Lounge</h3>
+                    <p>Soft everyday glam to full bridal artistry that photographs beautifully.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- BRAIDS CAROUSEL -->
+    <section class="cat-carousel section" id="braids">
+        <div class="section-heading reveal-up">
+            <p class="section-label">The Braid Bar</p>
+            <h2 class="section-title">Braids &amp; Knots</h2>
+            <p>From box braids to knotless — protective styles built to last and made to turn heads.</p>
+        </div>
+        <div class="slide-viewport reveal-up">
+            <div class="slide-track" data-carousel="braids"></div>
+        </div>
+        <p class="gallery-more reveal-up"><a href="gallery.html" class="secondary-btn">Explore Braids +</a></p>
+    </section>
+
+    <!-- NAILS CAROUSEL -->
+    <section class="cat-carousel section cat-alt" id="nails">
+        <div class="section-heading reveal-up">
+            <p class="section-label">The Nail Atelier</p>
+            <h2 class="section-title">Nails With <span class="gold-text">Flair.</span></h2>
+            <p>Gel, acrylic and hand-painted art — details that finish every look.</p>
+        </div>
+        <div class="slide-viewport reveal-up">
+            <div class="slide-track slide-track-reverse" data-carousel="nails"></div>
+        </div>
+        <p class="gallery-more reveal-up"><a href="gallery.html" class="secondary-btn">Explore Nails +</a></p>
+    </section>
+
+    <!-- MAKEUP CAROUSEL -->
+    <section class="cat-carousel section" id="makeup">
+        <div class="section-heading reveal-up">
+            <p class="section-label">The Makeup Lounge</p>
+            <h2 class="section-title">Makeup That <span class="gold-text">Speaks.</span></h2>
+            <p>From soft everyday glam to full bridal artistry — flawless in every frame.</p>
+        </div>
+        <div class="slide-viewport reveal-up">
+            <div class="slide-track" data-carousel="makeup"></div>
+        </div>
+        <p class="gallery-more reveal-up"><a href="gallery.html" class="secondary-btn">Explore Makeup +</a></p>
+    </section>
+
+    <!-- VIDEO BANNER — INSIDE THE SALON -->
+    <section class="video-banner">
+        <video class="video-banner-bg" autoplay muted loop playsinline aria-hidden="true">
+            <source src="hero/hero.mp4" type="video/mp4">
+        </video>
+        <div class="video-banner-shade"></div>
+
+        <div class="video-banner-content" data-parallax="0.22">
+            <p class="section-label reveal-up">Inside The Salon</p>
+            <h2 class="section-title reveal-up" data-delay="1">Every Visit,<br>A <span class="gold-text">Transformation.</span></h2>
+            <p class="reveal-up" data-delay="2">
+                Step into a space designed around you — premium products, spotless tools,
+                and artists who obsess over the details you deserve.
+            </p>
+            <div class="hero-buttons reveal-up" data-delay="3">
+                <a href="contact.html" class="primary-btn">Book Your Chair</a>
+                <a href="https://wa.me/27753032625" target="_blank" rel="noopener" class="secondary-btn">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-inner" data-tilt>
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+            <p class="section-label">Ready for a New Look?</p>
+            <h2 class="section-title">Your Chair Is <span class="gold-text">Waiting.</span></h2>
+            <p>Hair, nails and makeup — book today and walk out feeling unstoppable.</p>
+            <a href="contact.html" class="primary-btn">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="index.html" class="logo">Mimies<span>Hair</span></a>
+            <p>Premium hair, nails and beauty in the heart of Tembisa, Johannesburg.</p>
+            <div class="socials">
+                <a href="https://wa.me/27753032625" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+                </a>
+                <a href="mailto:mitcheloften@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Mimies Hair. All Rights Reserved.</p>
+        <p class="credit">Website crafted by <a href="#" target="_blank" rel="noopener">Noel Digital Agency</a></p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="Hair style enlarged">
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
