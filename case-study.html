@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Case Study | Mimies Hair - Webcrafter</title>
+
+    <meta name="description"
+          content="How Webcrafter designed and built the Mimies Hair salon website - luxury black and gold design, WhatsApp-first booking, and a 70% lighter load.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0C0A09">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta property="og:title" content="Case Study | Mimies Hair - Webcrafter">
+    <meta property="og:description"
+          content="A Webcrafter case study: premium black and gold salon website with WhatsApp-first booking, local SEO and a 70% lighter build.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://noeljaywolf-create.github.io/mimies-hair/assets/og-image.jpg">
+    <meta property="og:url" content="https://noeljaywolf-create.github.io/mimies-hair/case-study.html">
+    <meta property="og:site_name" content="Webcrafter">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case Study | Mimies Hair - Webcrafter">
+    <meta name="twitter:image" content="https://noeljaywolf-create.github.io/mimies-hair/assets/og-image.jpg">
+
+    <link rel="icon"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%87%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script data-goatcounter="https://mimieshair.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="page-case">
+
+    <video class="page-video-bg" autoplay muted loop playsinline aria-hidden="true" poster="hero/poster-salon.jpg">
+        <source src="hero/salon-tour.mp4" type="video/mp4">
+    </video>
+    <div class="page-video-shade" aria-hidden="true"></div>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-logo">Mimies<span>Hair</span></span>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <a class="whatsapp-float" href="https://wa.me/27753032625" target="_blank" rel="noopener" aria-label="Chat with Mimies Hair on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.8.9 3.8 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9.9.9-4.8-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5 .9 6.9 2.7 1.9 1.9 2.9 4.3 2.9 6.9-.1 5.4-4.5 9.2-9.5 9.2zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.5-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+        </svg>
+    </a>
+
+    <!-- NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="Mimies Hair home">
+                Mimies<span>Hair</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pricing.html">Prices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-book-mobile"><a href="contact.html" class="primary-btn">Book Now</a></li>
+            </ul>
+
+            <a href="contact.html" class="primary-btn nav-book">Book Now</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-hero case-header">
+        <div class="page-hero-inner">
+            <p class="page-index" aria-hidden="true">CS</p>
+            <p class="section-label reveal-up">A Webcrafter Case Study</p>
+            <h1 class="reveal-up" data-delay="1">Mimies Hair,<br>Built To <span class="gold-text">Book.</span></h1>
+            <p class="page-hero-text reveal-up" data-delay="2">
+                A premium salon website that looks expensive, loads fast on mobile data,
+                and turns visitors into WhatsApp bookings.
+            </p>
+        </div>
+    </section>
+
+    <!-- THE BRIEF -->
+    <section class="cs-section section">
+        <div class="cs-wrap">
+            <div class="cs-head reveal-up">
+                <p class="section-label">The Brief</p>
+                <h2 class="section-title">A Salon That<br>Felt <span class="gold-text">Premium.</span></h2>
+            </div>
+            <div class="cs-copy reveal-up">
+                <p>
+                    Mimies Hair is a beauty salon in Tembisa, Johannesburg offering hair styling,
+                    braids, nails and makeup. The challenge: build a website that matched the
+                    red-carpet quality of the work - without scaring away local clients on
+                    expensive data plans or slow connections.
+                </p>
+                <p>
+                    The result is a five-page experience in a cinematic black and gold palette,
+                    built from scratch with vanilla HTML, CSS and JavaScript - no heavy page
+                    builders, no bloated frameworks, no unnecessary plugins.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE DESIGN -->
+    <section class="cs-section section cs-alt">
+        <div class="cs-wrap">
+            <div class="cs-head reveal-up">
+                <p class="section-label">The Design</p>
+                <h2 class="section-title">Black &amp; Gold,<br>Everywhere <span class="gold-text">That Counts.</span></h2>
+            </div>
+            <div class="cs-chips reveal-up">
+                <span class="cs-chip" style="--chip:#CA8A04">Gold #CA8A04</span>
+                <span class="cs-chip" style="--chip:#0C0A09">Ink #0C0A09</span>
+                <span class="cs-chip" style="--chip:#E9C15B">Champagne #E9C15B</span>
+                <span class="cs-chip" style="--chip:#7C6F5E">Muted #7C6F5E</span>
+            </div>
+            <div class="cs-copy reveal-up">
+                <p>
+                    Playfair Display for editorial headlines, Inter for crisp body text, and a
+                    restrained gold accent used sparingly - luxury through restraint. Every
+                    section earns its place: a 3D hero, a signature reel, service carousels,
+                    a price book and a booking-first contact page.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE BUILD + PERFORMANCE -->
+    <section class="cs-section section">
+        <div class="cs-wrap">
+            <div class="cs-head reveal-up">
+                <p class="section-label">The Build</p>
+                <h2 class="section-title">Fast, Light,<br><span class="gold-text">Findable.</span></h2>
+            </div>
+            <div class="cs-copy reveal-up">
+                <p>
+                    Hand-coded front-end with GSAP scroll animations, shipped free on GitHub
+                    Pages. Performance was treated as a feature: every image re-encoded,
+                    background videos swapped for a 0.3 MB loop, fonts preconnected and images
+                    lazy-loaded with aspect-ratio reserved to prevent layout shift.
+                </p>
+            </div>
+
+            <div class="cs-stats">
+                <div class="cs-stat reveal-up" data-delay="1">
+                    <strong data-count="5">0</strong>
+                    <span>Pages</span>
+                </div>
+                <div class="cs-stat reveal-up" data-delay="2">
+                    <strong><span data-count="90">0</span>+</strong>
+                    <span>Photos Optimised</span>
+                </div>
+                <div class="cs-stat reveal-up" data-delay="3">
+                    <strong><span data-count="70">0</span>%</strong>
+                    <span>Lighter Build</span>
+                </div>
+                <div class="cs-stat reveal-up" data-delay="4">
+                    <strong><span data-count="3">0</span> MB</strong>
+                    <span>Max Page Weight</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO + CONVERSION -->
+    <section class="cs-section section cs-alt">
+        <div class="cs-wrap">
+            <div class="cs-head reveal-up">
+                <p class="section-label">SEO &amp; Conversion</p>
+                <h2 class="section-title">Found On Google,<br>Booked On <span class="gold-text">WhatsApp.</span></h2>
+            </div>
+            <div class="cs-copy reveal-up">
+                <p>
+                    Local search is wired in with HairSalon structured data, a sitemap and
+                    location-focused copy so the salon shows up for "hair salon in Tembisa".
+                    Every booking path - the form, the price cards, the floating button -
+                    funnels straight into WhatsApp, where the salon already talks to clients.
+                </p>
+            </div>
+            <div class="cs-feats">
+                <div class="cs-feat reveal-up">
+                    <b>HairSalon Schema</b>
+                    <span>Name, hours, geo and prices for rich Google results.</span>
+                </div>
+                <div class="cs-feat reveal-up">
+                    <b>WhatsApp-First</b>
+                    <span>The booking form opens WhatsApp with a pre-filled message.</span>
+                </div>
+                <div class="cs-feat reveal-up">
+                    <b>Instant Social Cards</b>
+                    <span>Shared links preview with a branded image on every page.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-inner" data-tilt>
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+            <p class="section-label">Your Project, Next?</p>
+            <h2 class="section-title">Let's Build Something <span class="gold-text">Great.</span></h2>
+            <p>Salon, shop, restaurant or personal brand - same craft, tailored to you.</p>
+            <div class="hero-buttons">
+                <a href="mailto:chakwenyanoel0@gmail.com" class="primary-btn">Email Webcrafter</a>
+                <a href="https://wa.me/27771273169" target="_blank" rel="noopener" class="secondary-btn">WhatsApp Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="index.html" class="logo">Mimies<span>Hair</span></a>
+            <p>Premium hair, nails and beauty in the heart of Tembisa, Johannesburg.</p>
+            <div class="socials">
+                <a href="https://wa.me/27753032625" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+                </a>
+                <a href="mailto:mitcheloften@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Mimies Hair. All Rights Reserved.</p>
+        <p class="credit">Webcrafted by <a href="case-study.html">Webcrafter</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

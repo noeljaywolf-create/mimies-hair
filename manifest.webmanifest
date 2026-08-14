@@ -1,0 +1,25 @@
+{
+  "name": "Mimies Hair - Premium Hair, Nails & Beauty in Tembisa",
+  "short_name": "Mimies Hair",
+  "description": "Premium hair, nails, makeup, lashes and extensions in Tembisa, Johannesburg. Book on WhatsApp.",
+  "start_url": "/mimies-hair/",
+  "scope": "/mimies-hair/",
+  "display": "standalone",
+  "background_color": "#0C0A09",
+  "theme_color": "#0C0A09",
+  "lang": "en-ZA",
+  "icons": [
+    {
+      "src": "/mimies-hair/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/mimies-hair/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

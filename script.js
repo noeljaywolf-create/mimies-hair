@@ -439,3 +439,10 @@
         });
     }
 })();
+
+// Register service worker for offline + installability
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+    });
+}
