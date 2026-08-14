@@ -1,5 +1,5 @@
 ﻿/* ============================================================
-   MIMIES HAIR â€” Black & Gold Luxury
+   MIMIES HAIR - Black & Gold Luxury
    ============================================================ */
 
 :root {
@@ -204,7 +204,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .secondary-btn:hover { border-color: var(--gold); color: var(--gold-light); transform: translateY(-3px); }
 
-/* Reveal animations â€” cinematic 3D entrances */
+/* Reveal animations - cinematic 3D entrances */
 .reveal-up, .reveal-left, .reveal-right {
     opacity: 0;
     transition: opacity 0.9s var(--ease), transform 1s var(--ease);
@@ -691,7 +691,7 @@ button { font-family: inherit; cursor: pointer; }
 .service-card a:hover { gap: 0.9rem; color: var(--gold-light); }
 
 /* ============================================================
-   GALLERY â€” 3D COVERFLOW
+   GALLERY - 3D COVERFLOW
    ============================================================ */
 .coverflow {
     position: relative;
@@ -760,11 +760,11 @@ button { font-family: inherit; cursor: pointer; }
     50% { opacity: 1; }
 }
 
-/* GSAP driven â€” disable native scroll while pinned */
+/* GSAP driven - disable native scroll while pinned */
 body.coverflow-pinned .coverflow-viewport { overflow: visible; }
 
 /* ============================================================
-   SALON TOUR â€” 3D VIDEO STAGE
+   SALON TOUR - 3D VIDEO STAGE
    ============================================================ */
 .tour { background: radial-gradient(ellipse at 50% 0%, rgba(202, 138, 4, 0.08), transparent 60%); }
 .tour-stage {
@@ -838,7 +838,7 @@ body.coverflow-pinned .coverflow-viewport { overflow: visible; }
 .tour-tag-2 { bottom: 14%; right: 2%; }
 
 /* ============================================================
-   PRICING â€” R30 to R400
+   PRICING - R400 to R800
    ============================================================ */
 .pricing { background: rgba(20, 17, 16, 0.86); }
 .pricing-grid {
@@ -1296,7 +1296,7 @@ a.info-item:hover { border-color: var(--gold); background: var(--surface-2); }
 .svc-header, .gal-header { background: rgba(20, 17, 16, 0.8); }
 
 /* ============================================================
-   SERVICES PAGE â€” video background + tilt cards
+   SERVICES PAGE - video background + tilt cards
    ============================================================ */
 .svc-services {
     position: relative;
@@ -1419,7 +1419,7 @@ a.info-item:hover { border-color: var(--gold); background: var(--surface-2); }
 .svc-card > a:hover { gap: 0.9rem; color: var(--gold-light); }
 
 /* ============================================================
-   HOW IT WORKS â€” steps
+   HOW IT WORKS - steps
    ============================================================ */
 .steps {
     background: rgba(12, 10, 9, 0.88);
@@ -1650,7 +1650,7 @@ a.info-item:hover { border-color: var(--gold); background: var(--surface-2); }
 .gg-item:hover .gg-cap { opacity: 1; transform: none; }
 
 /* ============================================================
-   CONTACT PAGE â€” info cards + booking form
+   CONTACT PAGE - info cards + booking form
    ============================================================ */
 .contact { background: rgba(12, 10, 9, 0.9); }
 .contact-intro { color: var(--muted); margin-bottom: 1.6rem; }
@@ -1801,7 +1801,7 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
 }
 
 /* ============================================================
-   CATEGORY CAROUSELS â€” 3D sliding strips
+   CATEGORY CAROUSELS - 3D sliding strips
    ============================================================ */
 .gallery-more { text-align: center; margin-top: 2.6rem; }
 .cat-carousel { background: rgba(12, 10, 9, 0.88); }
@@ -1876,7 +1876,7 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
 .slide-card:hover figcaption { transform: translateY(-4px); }
 
 /* ============================================================
-   VIDEO BANNER â€” full-bleed background (hero.mp4)
+   VIDEO BANNER - full-bleed background (hero.mp4)
    ============================================================ */
 .video-banner {
     position: relative;
@@ -1920,7 +1920,7 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
 }
 
 /* ============================================================
-   FIXED AMBIENT VIDEO â€” plays behind every page
+   FIXED AMBIENT VIDEO - plays behind every page
    ============================================================ */
 .page-video-bg {
     position: fixed;
@@ -1943,7 +1943,7 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
 }
 
 /* ============================================================
-   REEL VIDEO BACKGROUND â€” right after hero (home)
+   REEL VIDEO BACKGROUND - right after hero (home)
    ============================================================ */
 .gallery { position: relative; }
 .reel-video-bg {
@@ -1969,7 +1969,7 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
 .gallery > :not(.reel-video-bg):not(.reel-video-shade) { position: relative; z-index: 2; }
 
 /* ============================================================
-   EXTRA 3D â€” everywhere
+   EXTRA 3D - everywhere
    ============================================================ */
 .price-banner { transform-style: preserve-3d; }
 .socials { perspective: 600px; }
