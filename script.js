@@ -407,26 +407,35 @@
     }
 
     /* ============================================================
-       BOOKING FORM
+       BOOKING FORM - sends booking via WhatsApp
        ============================================================ */
     const form = document.getElementById('bookingForm');
-    const formStatus = document.getElementById('formStatus');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = form.name.value.trim() || 'Guest';
-            const msg = `Thank you, ${name}! We'll contact you shortly to confirm your booking.`;
-            if (formStatus) {
-                formStatus.textContent = msg;
-            } else {
-                const note = form.querySelector('.form-note');
-                if (note) {
-                    note.textContent = msg;
-                    note.style.color = 'var(--gold-light)';
-                }
+            const phone = form.phone.value.trim();
+            const service = form.service.value;
+            const date = form.date.value;
+            const message = form.message.value.trim();
+
+            const lines = [
+                'Hello Mimies Hair! I would like to book an appointment.',
+                '',
+                'Name: ' + name,
+                phone ? 'Phone/WhatsApp: ' + phone : '',
+                service ? 'Service: ' + service : '',
+                date ? 'Preferred date: ' + date : '',
+                message ? 'Notes: ' + message : ''
+            ].filter(Boolean).join('\n');
+
+            window.open('https://wa.me/27753032625?text=' + encodeURIComponent(lines), '_blank', 'noopener');
+
+            const note = form.querySelector('.form-note');
+            if (note) {
+                note.textContent = 'Opening WhatsApp with your booking...';
+                note.style.color = 'var(--gold-light)';
             }
-            form.reset();
-            if (formStatus) setTimeout(() => { formStatus.textContent = ''; }, 7000);
         });
     }
 })();

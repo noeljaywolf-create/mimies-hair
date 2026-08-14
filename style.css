@@ -1020,6 +1020,51 @@ body.coverflow-pinned .coverflow-viewport { overflow: visible; }
 .pricing-note a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonials { background: rgba(12, 10, 9, 0.9); }
+.testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.testi-card {
+    padding: 2rem 1.8rem;
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: border-color 0.3s, transform 0.3s var(--ease);
+}
+.testi-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.testi-stars { color: var(--gold-light); letter-spacing: 0.2em; margin-bottom: 1rem; font-size: 0.95rem; }
+.testi-card blockquote {
+    color: rgba(250, 250, 249, 0.85);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0 0 1.4rem;
+}
+.testi-card figcaption { display: flex; align-items: center; gap: 0.8rem; }
+.testi-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--gold-grad);
+    color: #0C0A09;
+    font-weight: 700;
+    font-family: var(--serif);
+    flex-shrink: 0;
+}
+.testi-card figcaption strong { display: block; font-size: 0.98rem; }
+.testi-card figcaption small { color: var(--muted); font-size: 0.82rem; }
+
+/* ============================================================
    CTA
    ============================================================ */
 .cta {
@@ -1091,6 +1136,15 @@ a.info-item:hover { border-color: var(--gold); background: var(--surface-2); }
 .info-icon svg { width: 22px; height: 22px; }
 .info-item h4 { font-size: 1rem; margin-bottom: 0.25rem; font-family: var(--serif); }
 .info-item p { color: var(--muted); font-size: 0.93rem; line-height: 1.6; overflow-wrap: anywhere; word-break: break-word; }
+.hours-sun { display: block; margin-top: 0.2rem; color: var(--muted); font-size: 0.85rem; }
+.contact-map {
+    margin-top: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+.contact-map iframe { display: block; width: 100%; filter: brightness(0.9) contrast(1.05); }
 
 .contact-form {
     display: grid;
@@ -2094,7 +2148,7 @@ a.info-card:hover .info-arrow { opacity: 1; transform: none; }
 }
 
 @media (max-width: 380px) {
-    .pricing-grid, .signature-grid { grid-template-columns: minmax(0, 1fr); }
+    .pricing-grid, .signature-grid, .testi-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 400px) {

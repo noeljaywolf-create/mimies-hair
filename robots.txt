@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noeljaywolf-create.github.io/mimies-hair/sitemap.xml
