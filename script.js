@@ -12,8 +12,16 @@
     if (preloader) {
         const hide = () => preloader.classList.add('hidden');
         if (prefersReducedMotion) hide();
-        else window.addEventListener('load', () => setTimeout(hide, 500));
-        setTimeout(hide, 3500);
+        else {
+            const startedAt = Date.now();
+            const reveal = () => {
+                const elapsed = Date.now() - startedAt;
+                setTimeout(hide, Math.max(0, 450 - elapsed));
+            };
+            if (document.readyState !== 'loading') reveal();
+            else document.addEventListener('DOMContentLoaded', reveal);
+            setTimeout(hide, 2200);
+        }
     }
 
     /* ============================================================
