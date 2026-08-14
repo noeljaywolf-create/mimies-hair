@@ -79,11 +79,17 @@ button { font-family: inherit; cursor: pointer; }
     text-align: center;
 }
 .preloader-logo span { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.preloader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+}
 .preloader-bar {
-    width: 220px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.08);
-    margin-top: 1.2rem;
+    width: min(260px, 62vw);
+    height: 3px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 999px;
     overflow: hidden;
 }
 .preloader-bar span {
@@ -91,6 +97,7 @@ button { font-family: inherit; cursor: pointer; }
     height: 100%;
     width: 40%;
     background: var(--gold-grad);
+    border-radius: 999px;
     animation: preload 1s infinite var(--ease);
 }
 @keyframes preload {
@@ -283,25 +290,25 @@ button { font-family: inherit; cursor: pointer; }
     width: 46px;
     height: 46px;
     padding: 0;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
+    background: var(--gold-grad);
+    border: none;
     border-radius: 13px;
     cursor: pointer;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 26px rgba(202, 138, 4, 0.35);
     z-index: 130;
-    transition: border-color 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s var(--ease);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s var(--ease);
 }
-.hamburger:hover { border-color: var(--border); box-shadow: 0 8px 26px rgba(202, 138, 4, 0.18); }
-.hamburger:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.hamburger:hover { box-shadow: 0 14px 32px rgba(202, 138, 4, 0.45); transform: translateY(-2px); }
+.hamburger:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 .hamburger span {
     width: 20px;
-    height: 2px;
-    background: var(--gold-grad);
-    border-radius: 2px;
+    height: 2.5px;
+    background: #0C0A09;
+    border-radius: 3px;
     transition: transform 0.35s var(--ease), opacity 0.3s, width 0.35s var(--ease);
 }
-.hamburger.active { background: rgba(202, 138, 4, 0.1); border-color: var(--border); }
+.hamburger.active { background: rgba(202, 138, 4, 0.85); box-shadow: none; }
 .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; width: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
