@@ -1,4 +1,4 @@
-const CACHE = "mimies-hair-v1";
+const CACHE = "mimies-hair-v2";
 const SHELL = [
     "./",
     "./index.html",
